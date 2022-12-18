@@ -4,7 +4,9 @@ import Tours from "./Tours";
 
 function Home({ place, setplace, removeTour }) {
   const [loading, setloading] = useState(true);
-
+  const fetchTourss = () => {
+    window.location.reload();
+  };
   const fetchTours = () => {
     setloading(false);
   };
@@ -24,7 +26,7 @@ function Home({ place, setplace, removeTour }) {
       <main>
         <div className="title">
           <h2>No Tours Left</h2>
-          <button className="btn" onClick={fetchTours}>
+          <button className="btn" onClick={fetchTourss}>
             Refresh
           </button>
         </div>
